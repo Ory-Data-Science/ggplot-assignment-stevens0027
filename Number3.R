@@ -18,3 +18,8 @@ ggplot(data = dat, aes(x = mass.g., y = newborn.g.)) +
 ggplot(data = dat, aes(x = mass.g., y = newborn.g., color=order)) +
   labs(x = "Adult Mass", y = "Newborn Mass") +
   scale_x_log10() + scale_y_log10() + geom_point()
+#4
+  ggplot(data = dat, aes(x = mass.g., y = newborn.g.)) +
+  labs(x = "Adult Mass", y = "Newborn Mass") +
+  scale_x_log10() + scale_y_log10() + geom_point() +
+  facet_wrap(~ order, nrow = 4, ncol = 5)
