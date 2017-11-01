@@ -29,3 +29,9 @@ ggplot(data = dat, aes(x = F_mass)) +
   geom_histogram(aes(x = M_mass), alpha = 0.3) +
   facet_wrap(~family)
 #5
+ggplot(data = dat, aes(x = F_wing)) +
+  labs(x = "Wing Size") +
+  scale_x_log10() +
+  geom_histogram(fill =  "blue", alpha = 0.3) +
+  geom_histogram(aes(x = M_Wing), alpha = 0.3) +
+  facet_wrap(~family)
